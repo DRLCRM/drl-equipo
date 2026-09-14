@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipo DRL Express</title>
+<style>
+  :root{
+    --navy:#1A0E45; --navy2:#3D1E6B; --fuchsia:#C81E7A; --orange:#F47920;
+    --bg:#F4F2FA; --ink:#1A0E45; --muted:#6E6785;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);display:flex;justify-content:center;}
+  .wrap{width:100%;max-width:460px;padding:2.2rem 1.4rem;}
+  .header{text-align:center;margin-bottom:2rem;}
+  .header img{height:40px;margin-bottom:0.8rem;}
+  .header h1{font-size:20px;color:var(--ink);font-weight:800;}
+  .header p{font-size:13px;color:var(--muted);margin-top:0.3rem;}
+  .list{display:flex;flex-direction:column;gap:0.8rem;}
+  .card{
+    display:flex;align-items:center;gap:0.9rem;
+    background:#fff;border-radius:14px;padding:0.9rem 1.1rem;
+    text-decoration:none;
+    box-shadow:0 4px 14px rgba(26,14,69,0.08);
+  }
+  .avatar{
+    width:46px;height:46px;border-radius:50%;
+    background:linear-gradient(135deg,var(--fuchsia),var(--navy2));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:16px;flex-shrink:0;
+  }
+  .info .name{font-size:15px;font-weight:800;color:var(--ink);}
+  .info .role{font-size:12.5px;color:var(--muted);margin-top:2px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <h1>Equipo DRL Express</h1>
+    <p>Directorio de contactos</p>
+  </div>
+  <div class="list">
+    <a class="card" href="/david/">
+      <div class="avatar">DR</div>
+      <div class="info">
+        <div class="name">David Ramos</div>
+        <div class="role">COO - Gerente General</div>
+      </div>
+    </a>
+  </div>
+</div>
+</body>
+</html>

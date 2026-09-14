@@ -3,51 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Equipo DRL Express</title>
+<title>David Ramos | DRL Express</title>
+<meta property="og:title" content="David Ramos — CEO, DRL Express & Logística">
+<meta property="og:description" content="Contacta a David Ramos directamente.">
+<meta property="og:image" content="https://equipo.drlexpresscol.com.co/david/lewis-preview.jpg">
+<meta property="og:url" content="https://equipo.drlexpresscol.com.co/david/">
+<meta property="og:type" content="profile">
 <style>
   :root{
-    --navy:#1A0E45; --navy2:#3D1E6B; --fuchsia:#C81E7A; --orange:#F47920;
-    --bg:#F4F2FA; --ink:#1A0E45; --muted:#6E6785;
+    --navy:#1A0E45;
+    --navy2:#3D1E6B;
+    --fuchsia:#C81E7A;
+    --orange:#F47920;
+    --bg:#F4F2FA;
+    --ink:#1A0E45;
+    --muted:#6E6785;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);display:flex;justify-content:center;}
-  .wrap{width:100%;max-width:460px;padding:2.2rem 1.4rem;}
-  .header{text-align:center;margin-bottom:2rem;}
-  .header img{height:40px;margin-bottom:0.8rem;}
-  .header h1{font-size:20px;color:var(--ink);font-weight:800;}
-  .header p{font-size:13px;color:var(--muted);margin-top:0.3rem;}
-  .list{display:flex;flex-direction:column;gap:0.8rem;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    display:flex;justify-content:center;
+    padding:0;
+  }
   .card{
-    display:flex;align-items:center;gap:0.9rem;
-    background:#fff;border-radius:14px;padding:0.9rem 1.1rem;
-    text-decoration:none;
-    box-shadow:0 4px 14px rgba(26,14,69,0.08);
+    width:100%;max-width:460px;
+    background:#fff;
+    min-height:100vh;
+    position:relative;
   }
-  .avatar{
-    width:46px;height:46px;border-radius:50%;
-    background:linear-gradient(135deg,var(--fuchsia),var(--navy2));
+
+  /* HERO */
+  .hero{
+    width:100%;height:0;padding-top:128%;
+    position:relative;
+    background-image:url('david-photo.jpg');
+    background-size:cover;background-position:center 20%;
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(12,6,38,0.92) 0%, rgba(12,6,38,0.55) 28%, rgba(12,6,38,0.05) 55%, rgba(12,6,38,0) 65%);
+  }
+  .share-btn{
+    position:absolute;top:1.2rem;right:1.2rem;z-index:3;
+    width:42px;height:42px;border-radius:50%;
+    background:rgba(255,255,255,0.92);
     display:flex;align-items:center;justify-content:center;
-    color:#fff;font-weight:800;font-size:16px;flex-shrink:0;
+    box-shadow:0 4px 14px rgba(0,0,0,0.25);
+    border:none;cursor:pointer;
   }
-  .info .name{font-size:15px;font-weight:800;color:var(--ink);}
-  .info .role{font-size:12.5px;color:var(--muted);margin-top:2px;}
+  .share-btn svg{width:19px;height:19px;}
+
+  .brand-badge{
+    position:absolute;top:1.2rem;left:1.2rem;z-index:3;
+    background:rgba(12,6,38,0.55);
+    backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:12px;
+    padding:8px 12px;
+    display:flex;align-items:center;
+    box-shadow:0 4px 14px rgba(0,0,0,0.25);
+  }
+  .brand-badge img{height:26px;display:block;}
+
+  .hero-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 1.6rem 1.5rem;text-align:center;}
+  .hero-text .name{
+    font-size:32px;font-weight:800;color:#fff;letter-spacing:-0.5px;
+    text-shadow:0 3px 16px rgba(0,0,0,0.5);line-height:1.1;
+  }
+  .hero-text .company-tag{
+    margin-top:0.5rem;
+    display:inline-flex;align-items:center;gap:6px;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.35);
+    backdrop-filter:blur(6px);
+    padding:5px 14px;border-radius:999px;
+    font-size:12px;font-weight:700;color:#fff;letter-spacing:0.5px;text-transform:uppercase;
+  }
+
+  /* ROLE BAND */
+  .role-band{
+    text-align:center;
+    padding:1.5rem 1.5rem 0.4rem;
+  }
+  .role-band .role{
+    font-size:20px;font-weight:800;color:var(--ink);
+  }
+  .role-band .sub{
+    margin-top:0.3rem;font-size:14px;color:var(--muted);font-weight:500;
+  }
+
+  /* ICON GRID */
+  .grid{
+    display:flex;flex-wrap:wrap;
+    padding:1.8rem 0.9rem 1rem;
+  }
+  .item{
+    display:flex;flex-direction:column;align-items:center;
+    text-decoration:none;
+    width:33.333%;
+    padding:0 0.5rem;
+    margin-bottom:1.6rem;
+  }
+  .item .icon-box{margin-bottom:0.55rem;}
+  .icon-box{
+    width:60px;height:60px;border-radius:16px;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 10px rgba(26,14,69,0.16), inset 0 1px 1px rgba(255,255,255,0.25);
+    position:relative;
+  }
+  .icon-box::after{
+    content:'';position:absolute;inset:0;border-radius:16px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0) 45%);
+  }
+  .icon-box svg{width:30px;height:30px;position:relative;z-index:1;}
+  .item span{
+    font-size:12.5px;font-weight:700;color:var(--ink);text-align:center;
+  }
+  .bg-whatsapp{background:linear-gradient(145deg,#2CDA6B,#0F9D4C);}
+  .bg-web{background:linear-gradient(145deg,#4B2E8C,var(--navy));}
+  .bg-mail{background:linear-gradient(145deg,#4FA8FF,#0A6CE0);}
+  .bg-phone{background:linear-gradient(145deg,#32DE7E,#0FA85A);}
+  .bg-ig{background:radial-gradient(circle at 30% 110%, #ffdb7d 0%, #ee2a7b 40%, #6228d7 90%);}
+  .bg-fb{background:linear-gradient(145deg,#3B82FF,#0B57D0);}
+
+  /* SAVE BUTTON */
+  .save-wrap{padding:0.6rem 1.4rem 1.6rem;}
+  .save-btn{
+    display:block;width:100%;text-align:center;
+    background:linear-gradient(135deg,var(--fuchsia),var(--navy2));
+    color:#fff;font-weight:800;font-size:15px;
+    padding:15px;border-radius:14px;text-decoration:none;
+    box-shadow:0 8px 20px rgba(200,30,122,0.3);
+  }
+
+  /* FOOTER */
+  .footer{
+    text-align:center;padding:1rem 1rem 2.2rem;
+  }
+  .footer img{height:26px;opacity:0.9;}
+  .footer .tag{margin-top:0.4rem;font-size:11px;color:var(--muted);letter-spacing:0.5px;}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="header">
-    <h1>Equipo DRL Express</h1>
-    <p>Directorio de contactos</p>
+<div class="card">
+
+  <div class="hero">
+    <div class="brand-badge">
+      <img src="logo.png" alt="DRL Express">
+    </div>
+    <button class="share-btn" onclick="shareCard()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#1A0E45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.6" y1="10.5" x2="15.4" y2="6.5"></line><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line>
+      </svg>
+    </button>
+    <div class="hero-text">
+      <div class="name">David Ramos</div>
+      <div class="company-tag">DRL Express &amp; Logística</div>
+    </div>
   </div>
-  <div class="list">
-    <a class="card" href="/david/">
-      <div class="avatar">DR</div>
-      <div class="info">
-        <div class="name">David Ramos</div>
-        <div class="role">COO - Gerente General</div>
+
+  <div class="role-band">
+    <div class="role">COO - Gerente General</div>
+    <div class="sub">Grupo DRL — Bogotá, Colombia</div>
+  </div>
+
+  <div class="grid">
+    <a class="item" href="https://wa.me/573013963083" target="_blank">
+      <div class="icon-box bg-whatsapp">
+        <svg viewBox="0 0 32 32" fill="#fff"><path d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.386.629 4.62 1.727 6.555L4 29l7.633-1.673A11.94 11.94 0 0 0 16 27.003c6.628 0 12-5.373 12-12.002C28 8.373 22.629 3 16.001 3zm.001 21.8c-1.94 0-3.75-.51-5.32-1.398l-.382-.222-4.522.992.966-4.408-.25-.41A9.77 9.77 0 0 1 5.2 15c0-5.963 4.837-10.8 10.8-10.8 5.963 0 10.8 4.837 10.8 10.8 0 5.963-4.837 10.8-10.798 10.8zm5.918-8.095c-.324-.162-1.917-.946-2.213-1.055-.297-.108-.513-.162-.729.163-.216.324-.837 1.054-1.026 1.271-.189.216-.378.243-.702.081-.324-.162-1.367-.504-2.604-1.607-.963-.858-1.613-1.919-1.803-2.243-.189-.324-.02-.499.142-.66.146-.146.324-.378.486-.567.162-.19.216-.324.324-.54.108-.216.054-.406-.027-.567-.081-.162-.729-1.756-.999-2.406-.263-.632-.53-.546-.729-.556-.189-.009-.405-.011-.621-.011-.216 0-.567.081-.864.406-.297.324-1.134 1.108-1.134 2.703 0 1.595 1.161 3.136 1.323 3.352.162.216 2.286 3.49 5.538 4.895.774.334 1.377.534 1.847.684.776.247 1.482.212 2.041.128.623-.093 1.917-.784 2.187-1.541.27-.757.27-1.406.189-1.541-.081-.135-.297-.216-.621-.378z"/></svg>
       </div>
+      <span>WhatsApp</span>
+    </a>
+    <a class="item" href="https://www.drlexpresscol.com.co/" target="_blank">
+      <div class="icon-box bg-web">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path>
+          <path d="M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"></path>
+        </svg>
+      </div>
+      <span>Sitio web</span>
+    </a>
+    <a class="item" href="mailto:gerencia@drlexpresscol.com.co">
+      <div class="icon-box bg-mail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.5" y="5.5" width="19" height="13" rx="3"></rect>
+          <path d="M3.5 7.2l7.3 5.6c.7.55 1.7.55 2.4 0l7.3-5.6"></path>
+        </svg>
+      </div>
+      <span>Mail</span>
+    </a>
+    <a class="item" href="tel:+573013963083">
+      <div class="icon-box bg-phone">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M7.1 2.3c.7-.2 1.4.1 1.8.7l1.7 2.7c.4.6.3 1.4-.2 1.9l-1.3 1.3c-.2.2-.3.5-.1.8 1 2 2.6 3.6 4.6 4.6.3.2.6.1.8-.1l1.3-1.3c.5-.5 1.3-.6 1.9-.2l2.7 1.7c.6.4.9 1.1.7 1.8l-.6 2.2c-.2.7-.9 1.2-1.6 1.1-8-1-14.1-7.1-15.1-15.1-.1-.7.4-1.4 1.1-1.6l2.2-.6z"/></svg>
+      </div>
+      <span>Teléfono</span>
+    </a>
+    <a class="item" href="https://instagram.com/drlexpresscolombia/" target="_blank">
+      <div class="icon-box bg-ig">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5.5"></rect>
+          <circle cx="12" cy="12" r="4.3"></circle>
+          <circle cx="17.4" cy="6.6" r="1.15" fill="#fff" stroke="none"></circle>
+        </svg>
+      </div>
+      <span>Instagram</span>
+    </a>
+    <a class="item" href="https://www.facebook.com/profile.php?id=61561028465696" target="_blank">
+      <div class="icon-box bg-fb">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10.5" fill="none"/><path d="M13.8 21.8v-8.1h2.7l.4-3.2h-3.1V8.4c0-.9.3-1.6 1.7-1.6h1.6V3.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.7H8.2v3.2h2.7v8.1h2.9z" fill="#fff"/></svg>
+      </div>
+      <span>Facebook</span>
     </a>
   </div>
+
+  <div class="save-wrap">
+    <a class="save-btn" href="https://wa.me/573013963083?text=Hola%20David" target="_blank">Escribir por WhatsApp</a>
+  </div>
+
+  <div class="footer">
+    <img src="logo.png" alt="DRL Express">
+    <div class="tag">DRL EXPRESS &amp; LOGÍSTICA</div>
+  </div>
+
 </div>
+
+<script>
+function shareCard(){
+  const url = "https://equipo.drlexpresscol.com.co/david/";
+  const shareData = { title: "David Ramos — DRL Express", text: "Contacta a David Ramos", url: url };
+  if (navigator.share) {
+    navigator.share(shareData).catch(()=>{});
+  } else {
+    navigator.clipboard.writeText(url).then(()=>{ alert("Link copiado: " + url); });
+  }
+}
+</script>
 </body>
 </html>
